@@ -27,17 +27,6 @@
     p.lead { margin: 0; color: var(--text-muted); font-size: 0.95rem; }
 
     main { padding: 1.5rem 1rem 3rem; }
-    .controls { display: grid; grid-template-columns: minmax(0, 2.5fr) minmax(0, 1.3fr) minmax(0, 1.3fr); gap: 0.75rem; margin-bottom: 1rem; align-items: end; }
-    .field { display: flex; flex-direction: column; gap: 0.25rem; font-size: 0.8rem; color: var(--text-muted); }
-    .field label { font-weight: 500; }
-
-    input[type="search"], select { border-radius: 999px; border: 1px solid var(--border); padding: 0.5rem 0.9rem; font-size: 0.85rem; background: var(--surface); color: var(--text); outline: none; box-shadow: none; }
-    input[type="search"]:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent-soft); }
-
-    .pill-row { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.35rem; }
-    .pill { border-radius: 999px; border: 1px solid var(--border); padding: 0.25rem 0.6rem; font-size: 0.75rem; cursor: pointer; background: #faf7f2; color: var(--text-muted); }
-    .pill.active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
-
     .table-card { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow-md); padding: 0.75rem 0.75rem 0.5rem; }
     .table-header-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem; font-size: 0.8rem; color: var(--text-muted); }
     .table-header-row span { font-weight: 500; }
@@ -45,9 +34,7 @@
     .table-scroll { overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--border); max-height: 70vh; }
 
     table { width:100%; border-collapse: collapse; font-size: 0.85rem; min-width: 950px; }
-    thead th { position: sticky; top: 0; background: #faf9f5; border-bottom: 2px solid var(--border); padding: 0.4rem 0.45rem; text-align: left; font-weight: 600; cursor: pointer; white-space: nowrap; }
-    thead th.sort-asc::after { content: " ▲"; font-size: 0.7rem; }
-    thead th.sort-desc::after { content: " ▼"; font-size: 0.7rem; }
+    thead th { position: sticky; top: 0; background: #faf9f5; border-bottom: 2px solid var(--border); padding: 0.4rem 0.45rem; text-align: left; font-weight: 600; white-space: nowrap; }
 
     tbody td { border-bottom:1px solid #e5e1da; padding:0.35rem 0.45rem; vertical-align: top; }
     tbody tr:nth-child(even) { background: var(--surface-alt); }
@@ -60,10 +47,7 @@
 
     td.type { white-space:nowrap; color: var(--text-muted); }
 
-    mark { background: #fff3b0; padding: 0 0.1rem; border-radius: 2px; }
-
     @media (max-width: 900px) {
-      .controls { grid-template-columns: minmax(0, 1fr); }
       main { padding-top: 1rem; }
     }
 
@@ -77,14 +61,14 @@
   <header>
     <div class="wrap">
       <h1>CoachChatt Competitor Comparison</h1>
-      <p class="lead">Search, filter, and sort to see how CoachChatt compares with other youth sports platforms, including SafeSport-related notes.</p>
+      <p class="lead">Search, filter, and sort to see how CoachChatt compares with other sports platforms, including federations like Sport:80.</p>
     </div>
   </header>
   <main>
     <div class="wrap">
       <section class="table-card" aria-label="Comparison table">
         <div class="table-header-row">
-          <span>Scroll horizontally to see SafeSport columns; click a platform name to open its site.</span>
+          <span>Scroll horizontally to see all columns; click a platform name to open its site.</span>
           <span></span>
         </div>
         <div class="table-scroll">
@@ -120,6 +104,7 @@
 <tr><td class="platform" data-col="0"><a href="https://circle.so/" target="_blank" rel="noopener noreferrer">Circle</a></td><td class="type" data-col="1">Community platform</td><td data-col="2">White-label community platform with spaces, chat, courses, events, and memberships under your brand</td><td data-col="3">Community, chat, and content around teams, programs, and fan groups</td><td data-col="4">Community spaces, group chat, and member content around a shared interest (youth sports)</td><td data-col="5">Very polished, flexible community UX for creators and brands; mature memberships/courses/events</td><td data-col="6">Youth-sports-specific workflows, verified roles (coach/parent/athlete), and AI-monitored youth comms</td><td data-col="7">Subscription tiers based on members/features</td><td data-col="8">No; SaaS subscriptions</td><td data-col="9">Late 2010s; widely used across creator and brand communities</td><td data-col="10">USA/remote</td><td data-col="11">VC-backed community SaaS</td><td data-col="12">https://circle.so/</td><td data-col="13">Not explicitly documented</td><td data-col="14">No clear public statement that the product is SafeSport-compliant; organizations must configure policies, supervision, and training to meet SafeSport requirements.</td></tr>
 <tr><td class="platform" data-col="0"><a href="https://www.360player.com/" target="_blank" rel="noopener noreferrer">360Player</a></td><td class="type" data-col="1">Team development platform</td><td data-col="2">All-in-one club/team app: communication, calendar, stats, video analysis, assessments, training plans, and player reviews</td><td data-col="3">Team communication, schedule, streaming/stat vision, and athlete journey</td><td data-col="4">Team communication, schedules, stats, and performance/video tools for youth teams</td><td data-col="5">Rich assessments, data, and video analytics tightly integrated with team workflows</td><td data-col="6">Transcript-based safety, multi-org journeys, and school/parent oversight as a core promise</td><td data-col="7">Club/team subscriptions; contact sales</td><td data-col="8">No</td><td data-col="9">Mid-2010s; active across Europe and beyond</td><td data-col="10">Europe (Sweden-based) with global users</td><td data-col="11">Private company</td><td data-col="12">https://www.360player.com/</td><td data-col="13">Not US SafeSport-specific (non-US jurisdiction)</td><td data-col="14">Focuses on safeguarding and data privacy generally; no explicit reference to U.S. Center for SafeSport rules in public materials reviewed.</td></tr>
 <tr><td class="platform" data-col="0"><a href="https://squadfusion.com/" target="_blank" rel="noopener noreferrer">SquadFusion</a></td><td class="type" data-col="1">League/club management</td><td data-col="2">Sports management software for registration, payments, website, communications, team pages, schedules, and facility bookings</td><td data-col="3">Org registration/payments, team comms, and youth sports operations</td><td data-col="4">Youth league/club registration, payments, site, team pages, and communication</td><td data-col="5">Clear packaged pricing with full registration/website stack and facilities; battle-tested multi-sport ops</td><td data-col="6">Youth communication safety, transcripts, and cross-org athlete tracking beyond pure ops</td><td data-col="7">Annual plans: Rookie $399, All Star ~$799, MVP ~$1,399 per year with different notification and facility features</td><td data-col="8">No</td><td data-col="9">Mid-2010s; in market for years</td><td data-col="10">USA</td><td data-col="11">Privately held</td><td data-col="12">https://squadfusion.com/</td><td data-col="13">Not explicitly documented</td><td data-col="14">No clear public statement that the product is SafeSport-compliant; organizations must configure policies, supervision, and training to meet SafeSport requirements.</td></tr>
+<tr><td class="platform" data-col="0"><a href="https://sport80.com/" target="_blank" rel="noopener noreferrer">Sport:80</a></td><td class="type" data-col="1">NGB / federation management platform</td><td data-col="2">Cloud sports management platform for national governing bodies and federations: memberships, event registration/licensing, compliance, finance, CRM, data, and portals.</td><td data-col="3">Youth/amateur sports OS for schools, clubs, and teams: safe communication, payments, scheduling, live streaming, and athlete journeys.</td><td data-col="4">Membership management, compliance tracking, event registration and payments, and communication around youth/amateur sport.</td><td data-col="5">Deep back-office tooling for NGBs across multiple countries, large-scale membership databases, and sophisticated governance/compliance workflows trusted by 70–80+ sports bodies.</td><td data-col="6">Purpose-built for day-to-day youth teams, schools, and parents with AI-moderated comms and transcripted interactions, rather than heavy national federation operations.</td><td data-col="7">Custom pricing for each governing body; revenue from SaaS licenses plus card/processing fees (e.g., ~2% + Stripe on some event payments).</td><td data-col="8">No; B2B SaaS and processing fees.</td><td data-col="9">2010s; now used by 75–80+ sports organisations with millions of users.</td><td data-col="10">UK-based with clients in UK, USA, Ireland, Australia and more.</td><td data-col="11">Privately held, growing via federations and NGB contracts.</td><td data-col="12">https://sport80.com/</td><td data-col="13">Yes (integrated access to U.S. Center for SafeSport LMS)</td><td data-col="14">Sport:80 has a one-of-a-kind integration with the U.S. Center for SafeSport LMS so members can launch mandatory and additional SafeSport certifications directly from the platform, helping NGBs enforce compliance across adults and youth.</td></tr>
 
             </tbody>
           </table>
